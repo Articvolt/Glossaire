@@ -1,0 +1,175 @@
+<!-- "HTML:5" pour faire le préremplissage -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<!-- métadonnée de la page web -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Le titre de la page  -->
+  <title>Cours HTML</title>
+  <!-- Icone de l'onglet -->
+  <link rel="shortcut icon" href="img/logo.png" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+</head>
+
+<!-- contenu affiché sur la page web -->
+<body>
+  <header>
+    <h1>Texte - Titre H1</h1> <!-- Généralement qu'un seul H1 par page -->
+    <p>
+      <em>"em" pour mettre en italique</em>.<br>
+      <strong>"strong" pour mettre en gras</strong>.<br>
+      <!-- span est utilisé pour attribuer des class ou des id, peut être comparé à une div mais c'est un élément de ligne (au lieu d'un bloc) -->
+      <span>L'élément en "span" ne revient pas à la ligne</span>. 
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+      cumque ratione veniam officiis nulla a debitis at facilis sed
+      dignissimos. [texte générique]
+    </p>
+  </header>
+
+  <section>
+    <div>
+      <h2>Photo - Titre H2</h2>
+      <!-- src = origine du fichier | alt = nom alternatif si le lien ne fonctionne pas -->
+      <img src="img/img.jpg" alt="image-arbre" height="200" />
+    </div>
+
+
+    <!-- PARTIE LISTE -->
+    <div>
+      <h3>Liste - Titre H3</h3>
+
+      <ul>
+        <li>UL = unordered list</li>
+        <li>UL = unordered list</li>
+        <li>UL = unordered list</li>
+      </ul>
+
+      <ol>
+        <li>OL = ordered list</li>
+        <li>OL = ordered list</li>
+        <li>OL = ordered list</li>
+      </ol>
+    </div>
+
+
+    <!-- PARTIE TABLEAU -->
+    <div>
+      <h4>Tableaux - Titre H4</h4>
+      <table border="4" cellpadding="10" cellspacing="4" style="text-align: center">
+        <thead>
+          <tr> <!-- tr = représente une ligne (rows) | th = élément d'en tête du tableau -->
+            <th>Col 1</th>
+            <th>Col 2</th> <!-- maj + alt + flèche bas pour copier la ligne vers le bas -->
+            <th>Col 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr> <!-- rawspan = fusion de deux lignes | colspan = fusion de deux colonnes -->
+            <td rowspan="2">Row 1 Cell 1</td>
+            <td>Row 1 Cell 2</td>
+            <td>Row 1 Cell 3</td>
+          </tr>
+          <tr>
+            <td>Row 2 Cell 2</td>
+            <td>Row 2 Cell 3</td>
+          </tr>
+          <tr>
+            <td colspan="3">Row 3 Cell 1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- PARTIE LIEN -->
+    <div>
+      <h5><span>&#9814;</span> Liens - Titre H5</h5>
+      <!-- a = créé un lien hypertexte | target = permet de dirigé le lien sur un nouvel onglet -->
+      <a href="https://htmlcheatsheet.com/" target="_blank">HTML Cheatsheet</a>
+      <br />
+      <a href="https://www.toptal.com/designers/htmlarrows/symbols/" target="_blank">Icones natifs en HTML</a>
+    </div>
+
+
+    <!-- PARTIE VIDEO -->
+    <div>
+      <h6><i class="fas fa-video"></i> Vidéo - Titre H6</h6>
+      <video src="media/video.mp4" height="150" autoplay loop muted></video>
+    </div>
+  </section>
+  <br>
+
+
+  <!-- PARTIE FORMULAIRE -->
+  <section>
+    <h2>Formulaire</h2>
+    <form action="/action.php" method="post">
+      <!-- input insertion de texte -->
+      <label for="name">Nom</label>
+      <input id="name" type="text" placeholder="Entrez votre nom" />
+      <br><br>
+
+      <!-- input range -->
+      <label for="number">Entrez votre age</label>
+      <input type="number" id="number-age" value="15" oninput="document.getElementById('range-age').value=this.value">
+      <input type="range" id="range-age" min="0" max="100" oninput="document.getElementById('number-age').value=this.value">
+      <br><br>
+
+      <!-- Input select -->
+      <label for="gender">Genre</label>
+      <select id="gender">
+        <option selected="selected" value="Homme">Homme</option>
+        <option value="Femme">Femme</option>
+      </select>
+      <br><br>
+
+      <!-- Input radio -->
+      <div>
+        <input type="radio" name="type" id="human" checked />
+        <label for="human">Humain</label>
+
+        <input type="radio" name="type" id="dog" />
+        <label for="dog">Chien</label>
+
+        <input type="radio" name="type" id="cat" />
+        <label for="cat">Chat</label>
+      </div>
+      <br>
+
+      <!-- input zone de texte -->
+      <textarea cols="20" rows="5" placeholder="Votre message..."></textarea>
+      <br><br>
+
+      <!-- Input Checkbox -->
+      <label><input type="checkbox" />Accepter les CGV</label>
+      <input type="submit" value="Submit" />
+    </form>
+  </section>
+
+  <br>
+
+  <!-- Mail & envoi de fichiers -->
+    <footer> <!-- footer = souvent utilisé pour la partie contacts / conditions d'utilisation et réglementation -->
+    <a href="mailto:ugodasilva67@gmail.com">Ecrivez-moi !</a>
+    <br>
+
+    <!-- téléchargement d'un fichier via un lien -->
+    <a href="notice.txt" download="nom-du-fichier">Télécharger la notice</a>
+    <br>
+
+    <!-- permet de faire un texte déroulant -->
+    <details>
+      <summary>Plus d'infos</summary>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum,
+        repellendus.
+      </p>
+    </details>
+  </footer>
+
+</body>
+</html>

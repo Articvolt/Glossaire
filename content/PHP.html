@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Glossaire PHP</title>
+</head>
+
+<body>
+    <header>
+        <a href="/index.html">ACCUEIL</a>
+        <h1>GLOSSAIRE PHP</h1>
+        <nav>
+            <ul>
+                <li> <a href="#definitions">Définitions</a></li>
+                <li> <a href="#conditions">Conditions</a></li>
+                <li> <a href="#methodeMagique">Méthodes magiques</a></li>
+                <li> <a href=""></a> </li>       
+            </ul>
+        </nav>
+    </header>
+
+    <article id="definitions">
+        <h2>Quelques définitions</h2>
+
+            <h3>Classe</h3>
+                <p>Une classe est un ensemble de code contenant des <span>variables et des fonctions</span>  permettant de créer des objets.</p>
+
+            <h3>Objet</h3>
+                <p>Instance (occurence : ligne de valeurs) d'une classe</p>
+
+            <h3>Encapsulation</h3>
+                <p>Rassemble des données et des méthodes d'une structure en empêchant l'accès aux données par un autre moyen que ceux indiqués (limiteur d'accès).</p>
+
+            <h3>constructeur</h3>
+                <p>Méthode appelée quand on instancie un objet.</p>
+
+            <h3>Méthodes</h3>
+                <p>Une fonction déclarée dans une classe.</p>
+
+            <h3>Contexte statique</h3>
+                <p>Permet d'y accéder sans avoir besoin d'instancier une classe.</p>
+
+            <h3>Accesseur</h3>
+                <p>Permet de lire les valeurs (<code>getter</code>)</p>
+
+            <h3>Mutateur</h3>
+                <p>Permet de modifier les valeurs (<code>setter</code>)</p>
+
+            <h3>$this</h3>
+                <p>Mot-clé qui permet d'appeler une méthode ou une propriété au sein de la classe actuelle.</p>
+
+            <h3>Concaténer</h3>
+                <p>Synonyme d'assembler. Il permet d'assembler du texte et des variables</p>
+
+            <h3>Guillemets simples et doubles</h3>
+                <p>Les guillemets doubles oblige à PHP d'analiser le contenu pour vérifier ou non la présence de variables.</p>
+                <p>La chaîne guillemets simple ne contient par défaut aucune variable interprétée.</p>
+
+            <h3>namespace</h3>
+                <p>
+                    (espaces de noms) Permet d'éviter les conflits entre différents éléments de même nom (classe / fonction / constantes).
+                </p>
+
+        <h2 id="conditions">Conditions</h2>
+            <h3>If...Else</h3>
+                <p>Inclut une condition SI ... ALORS.</p>
+                <ul>
+                    <li>Condition <code>If</code></li>
+                    <li>Entre parenthèse, la condition. Par exemple -> ( <code>$condition == true</code> )</li>
+                    <li>Entre accolades, les instructions à éxécuter si la condition est juste.</li>
+                    <br>
+                    <li>Condition <code>else</code></li>
+                    <li>Entre accolades, les instructions à éxecuter si la condition initiale n'est pas remplie.</li>
+                </ul>
+            
+            <h3>If...Elseif...else</h3>
+                <p></p>
+
+            <h3>Conditions multiples</h3>
+                <h4>&&</h4>
+                    <p>Signifie <code>AND</code> (et)</p>
+                <h4>||</h4>
+                    <p>Signifie <code>OR</code> (ou)</p>
+
+        <h2 id="methodeMagique">Méthodes magiques</h2>
+            <p>Les méthodes magiques sont des méthodes prédéfinies. Elles sont préfixées par un double sous-tirets, il est cependant impotant de les définir quelque part. ( <code>__</code> ). Elles sont utilisées dans le cas d'un événement particulier.</p>
+
+            <h3>__constuct()</h3>
+                <p>Permet d'instancier une classe possédat un constructeur. Initialise les valeurs d'un objet.</p>
+
+            <h3>__destuct()</h3>
+                <p>Permet de "nettoyer" le code en détuisant l'objet après son utilisation. Par exemple, on peux fermer la connexion à une base de données.</p>
+
+            <h3>__call()</h3>
+                <p>Permet d'appeler une méthode qui n'existe pas(ou inaccessible) à partir d'un objet. Utile pour éviter les erreurs fatales et éviter les failles de sécurités.</p>
+
+            <h3>__callStatic()</h3>
+                <p>Identique à la méthode magique <code>__call()</code> mais dans un contexte statique.</p>
+
+            <h3>__get()</h3>
+                <p>
+                    S'éxecute quand on tente d'accéder à une propriété inaccessible (ou qui n'existe pas) dans une classe.<br>
+                    Elle prend pour argument le nom de la propriété à laquelle on veut accéder.
+                </p>
+
+            <h3>__set()</h3>
+                <p>
+                    S'éxecute quand on tente de créer ou de mettre à jour une propriété inaccessible (ou qui n'existe pas) dans une classe.<br>
+                    Elle prend pour argument le nom et la valeur de la propriété ciblée.
+                </p>
+
+            <h3>__isset()</h3>
+                <p>Détermine si une variable est définie et si elle est différente de <code>NULL</code></p>
+
+            <h3>__unset()</h3>
+                <p>S'éxecute sur lorsque cette dernière est appelée sur des méthodes inaccessibles. Elle sert à détuire la variable.</p>
+
+            <h3>__empty()</h3>
+                <p>Pemet de déterminer si une variable est vide.</p>
+
+            <h3>__toString()</h3>
+                <p>Est utilisée pour traiter un objet comme une chaîne de caractère.</p>
+    
+            <h3>__invoke()</h3>
+                <p>Utilisée quand on tente d'appeler un objet comme une fonction.</p>
+
+            <h3>__clone()</h3>
+                <p>Permet de créer un clone de l'objet ciblé et ainsi, par la suite, modifier es propriétés du clone.</p>
+
+    </article>
+
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+/* PROPRIETE GENERALE */
+
+* {
+    box-sizing: border-box; /* le conteneur enfant ne déborde pas sur le parent */
+    margin: 0;   /* permet de coller au bord de la page */
+    background-color: #111827;
+    color: aliceblue;  
+    /* border: 1px solid red;  aide pour voir les box */  
+}
+
+/* SECTION HEADER */
+
+header {
+    text-align: center; /* permet de centrer le titre */
+}
+
+/* TITRE PRINCIPAL */
+
+h1 {
+    text-transform: uppercase; 
+    text-decoration: underline; /* texte souligné */
+    padding: 30px;
+    font-family: 'Roboto Mono', monospace; /* changement police d'écriture */
+    font-size: 100px; /* taille de police */
+    color: #8bbf43;
+
+}
+
+/* BARRE DE NAVIGATION */
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* centre le contenu lors d"un flex */
+}
+
+nav ul li {
+    text-transform: uppercase;  /* texte en majuscule */
+    list-style: none;      /* suppression des puces */
+    text-decoration: underline overline #8ab4f8;
+    margin: 0 30px;
+}
+
+
+/* IMAGES */
+
+.img-box-model {
+    width: 700px;
+    border: solid;
+    border-radius: 30px;
+}
+
+.img-collapse { 
+    width: 600px;
+}
+
+.img-border {
+    width: 150px;
+}
+
+.div-img {    /* permet d'aligner l'image au centre */
+    text-align: center;
+}
+
+.img-anatomy {
+    width: 700px;
+}
+
+/* TITRE CATEGORIE */
+
+h2 {
+    color: #8ab4f8;
+    font-size: 40px;
+    margin: 30px 0px;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #d08913;
+    font-size: 20px;
+    margin: 30px 0px;
+    text-decoration: underline; 
+}
+
+/* LIENS */
+
+a {
+    text-decoration: none; /* enlève le surlignement du lien hypertexte */
+    color: #8ab4f8;
+}
+
+/* PARAGRAPHE */
+
+p {
+    margin: 10px;
+    padding: 5px;
+    text-align: justify; /* alignement du texte par rapport aux bords gauche et droite */
+}
+
+/* TEXTE EN GRAS */
+
+strong {
+    color: #d08913;
+    text-transform: uppercase;
+}
+
+/* DESCRIPTIF IMAGE COLLAPSE */
+
+.img-aside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    margin: 20px;
+    border-radius: 30px;
+    width: 70%;
+}
+
+.text-img-aside {
+    width: 200px;
+}
+
+/* TEXTE CIBLE */
+
+span {
+    color:#db7478;
+}
+
+.msg-important {
+    text-transform: uppercase;
+    display: block;
+    margin: 20px;
+    text-align: center;
+}
